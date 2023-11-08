@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 編碼 -->
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="width: device-width, initial-scale: 1.0" />
+    <!-- 網頁標題 -->
+    <title>日本棋院</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            /*標楷體*/
+            font-family: DFkai-sb;
+        }
+
+        h1,
+        h3 {
+            font-weight: normal;
+        }
+
+        header div.top {
+            padding: 1rem;
+            /*背景圖片*/
+            background-image: url("./照片/background.png");
+        }
+
+        header div.top h1 {
+            font-size: 2.5rem;
+        }
+
+        header div.top h3 {
+            font-size: 1rem;
+        }
+
+        header nav {
+            background-color: black;
+        }
+
+        header nav ul {
+            display: flex;
+            /*列表格式*/
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            padding: 0.8rem 1.2rem;
+            color: white;
+        }
+
+        header nav ul li a {
+            color: white;
+            /*文字裝飾*/
+            text-decoration: none;
+            font-size: 1.25rem;
+        }
+
+        /*滑鼠覆蓋時動作*/
+        header nav ul li a:hover {
+            color: yellow;
+        }
+
+        .active {
+            color: yellow;
+        }
+
+        main section {
+            padding: 1rem;
+        }
+
+        .Japan {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        div.Japan img {
+            flex-grow: 1;
+            flex-basis: 300px;
+            max-width: 60vh;
+        }
+
+        div.Japan div.info {
+            flex-grow: 10;
+            flex-basis: 300px;
+            padding: 2rem;
+        }
+
+        div.Japan div.info p {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .compition {
+            display: flex;
+            padding: 1rem;
+        }
+
+        div.text {
+            padding: 1rem;
+            flex-grow: 5;
+            flex-basis: 300px;
+        }
+
+        div.text h3 {
+            font-size: 2rem;
+            color: rgb(12, 122, 92);
+        }
+
+        div.text p {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <h1>圍棋資訊網</h1>
+            <h3>圍棋是一種策略棋類，使用格狀棋盤及黑白二色棋子進行對弈。起源於中國，中國古時有「弈」、「碁」、「手談」等多種稱謂，屬琴棋書畫四藝。</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./main.html">網站首頁</a></li> <!--不會送請求-->
+                <li><a href="./korea.html">韓國棋院</a></li>
+                <li><a class="active" href="#">日本棋院</a></li>
+                <li><a href="./china.html">中國棋院</a></li>
+                <li><a href="./taiwan.html">海峰棋院</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--主題內容-->
+    <main class="container">
+        <section>
+            <div class="Japan">
+                <img src="./照片/Nihon_Ki-in_Headquarter_(2016-05-05)_5.jpg">
+                <div class="info">
+                    <p>日本棋院（日語：一般公益法人日本棋院／いっぱんこうえきほうじんにほんきいん Ippankōekihōjin Nihon
+                        kiin），是日本最大的圍棋管理組織，並負責組織各種棋戰。總部位於東京都千代田區，另在名古屋和大阪設有中部和關西總本部。目前，日本棋院轄下棋士約300名。</p>
+                    <p>日本棋院成立於1924年，由當時最大的兩個圍棋組織本因坊門和方圓社在大倉喜七郎的支持下合併而成。日本棋院成立後，先後同棋正社、吳清源和圍棋新社等組織或個人產生競爭。1950年，以橋本宇太郎為首的關西部分棋士脫離日本棋院，自創關西棋院。
+                    </p>
+                    <p>旗下組織有：</p>
+                    <ul>
+                        <li>東京本院</li>
+                        <li>關西總本部</li>
+                        <li>中部總本部</li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div class="compition">
+                <div class="text">
+                    <h3>日本棋院頭銜賽</h3>
+                    <p>日本圍棋七大主要賽事，根據獎金排序是棋聖、名人、本因坊、王座、天元、碁聖和十段。在這當中獎金較高的三個賽事棋聖、名人、本因坊並稱“三大頭銜戰”。其中棋聖是最高頭銜。如果同時包攬這三個頭銜的話，就被稱為“大三冠”。
+                        職業棋手爭冠的棋賽有很多，但是爭奪七個頭銜戰的“七大棋戰”和其他比賽有什麼區別呢？</p>
+                    <p>日本圍棋七大主要賽事，根據獎金排序是棋聖、名人、本因坊、王座、天元、碁聖和十段。在這當中獎金較高的三個賽事棋聖、名人、本因坊並稱“三大頭銜戰”。其中棋聖是最高頭銜。如果同時包攬這三個頭銜的話，就被稱為“大三冠”。
+                        職業棋手爭冠的棋賽有很多，但是爭奪七個頭銜戰的“七大棋戰”和其他比賽有什麼區別呢？</p>
+                    <p>頭銜賽的獎金如下：</p>
+                    <ul>
+                        <li>棋聖：4500萬日幣</li>
+                        <li>十段：700萬日幣</li>
+                        <li>本因坊：2800萬日幣</li>
+                        <li>碁聖：800萬日幣</li>
+                        <li>名人：3000萬日幣</li>
+                        <li>王座：1400萬日幣</li>
+                        <li>天元：1300萬日幣</li>
+                    </ul>
+                </div>
+                <div id="chart">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        // 資料
+        var data = [
+            { label: "棋聖", value: 4500 },
+            { label: "十段", value: 700 },
+            { label: "本因坊", value: 2800 },
+            { label: "碁聖", value: 800 },
+            { label: "名人", value: 3000 },
+            { label: "王座", value: 1400 },
+            { label: "天元", value: 1300 }
+        ];
+
+        // 圖表尺寸
+        var width = 400;
+        var height = 400;
+        var radius = Math.min(width, height) / 2;
+
+        // 顏色設定
+        var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        // 建立 SVG 元素
+        var svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        // 建立圓餅圖
+        var pie = d3.pie()
+            .value(function (d) { return d.value; });
+
+        var arc = d3.arc()
+            .outerRadius(radius)
+            .innerRadius(0);
+
+        var arcs = svg.selectAll("arc")
+            .data(pie(data))
+            .enter()
+            .append("g");
+
+        arcs.append("path")
+            .attr("d", arc)
+            .attr("fill", function (d) { return color(d.data.label); });
+
+        arcs.append("text")
+            .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
+            .attr("text-anchor", "middle")
+            .text(function (d) { return d.data.label; });
+    </script>
+</body>
+
+</html>
